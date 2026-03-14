@@ -31,7 +31,7 @@ El repositorio incluye **dos versiones del script**:
 
 ------------------------------------------------------------------------
 
-#  Gráficas Obtenisa:
+#  Gráficas Obtenidas:
 
 ![Grafica de ejemplo](images/grafica_ejemplo.png)
 
