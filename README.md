@@ -119,15 +119,61 @@ ventana gráfica cuando el monitoreo termina.
 
 ------------------------------------------------------------------------
 
-#  Diagrama de flujo
+#  Diagrama de flujo:
+El siguiente diagrama muestra el flujo general de ejecución del sistema de monitoreo.
 
-![Diagrama de flujo](images/diagrama_flujo.png)
+![Diagrama de flujo](D.Flujo.png)
+
+Proceso general:
+
+Inicia el programa.
+
+Se obtiene la temperatura del sistema.
+
+Se verifica si la ventana de la gráfica sigue abierta.
+
+Si está abierta:
+
+se actualizan los datos
+
+se actualiza la gráfica
+
+el sistema espera el intervalo definido
+
+El proceso se repite continuamente hasta que el usuario cierre la ventana.
+
+
 
 ------------------------------------------------------------------------
 
-#  Diagrama de clases
+#  Diagrama de clases:
+El diseño del programa se basa en una clase principal encargada de gestionar el monitoreo.
 
-![Diagrama de clases](images/diagrama_clases.png)
+![Diagrama de clases](D.Clases.png)
+
+La clase MonitorTemperaturaRPI contiene:
+
+Atributos
+
+duracion_max → duración máxima de datos mostrados en la gráfica
+
+intervalo → tiempo entre mediciones
+
+tiempos → lista de tiempos registrados
+
+temperaturas → lista de temperaturas registradas
+
+inicio → momento en que comienza el monitoreo
+
+Métodos
+
+leer_temperatura() → obtiene la temperatura actual
+
+actualizar_datos() → guarda las nuevas mediciones
+
+graficar() → actualiza la gráfica en tiempo real
+
+ejecutar() → controla el ciclo principal del monitoreo
 
 ------------------------------------------------------------------------
 
